@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Update User</h2>
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input name="first_name" value="{{ user.first_name }}" type="text" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input name="last_name" value="{{ user.last_name }}" type="text" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" value="{{ user.email }}" type="email" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="phone_number">Phone Number</label>
+            <input name="phone_number" value="{{ user.phone_number }}" type="tel" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="company">Company</label>
+            <input name="company" value="{{ user.company }}" type="text" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="job_title">Job Title</label>
+            <input name="job_title" value="{{ user.job_title }}" type="text" class="form-control" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Update User</button>
+    </form>
+</div>
+
+{% endblock %}
