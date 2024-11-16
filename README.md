@@ -20,3 +20,7 @@ A web application for managing personal and professional contacts, built using D
    ```bash
    git clone https://github.com/yourusername/django-contacts.git
    cd django-contacts
+2. Start the server:
+   ```bash
+   python manage.py runserver
+   
